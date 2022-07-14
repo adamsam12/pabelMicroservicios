@@ -1,0 +1,28 @@
+server:
+  port: 8087
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8099/eureka/
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: credit-service
+          uri: lb://credit-service
+          predicates:
+            - Path=/credit/**
+        - id: bank-service
+          uri: lb://bank-service
+          predicates:
+            - Path=/bank-account/**
+        - id: transactions-service
+          uri: lb://transactions-service
+          predicates:
+            - Path=/transaction/**
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/client/**

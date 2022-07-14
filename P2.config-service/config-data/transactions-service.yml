@@ -1,0 +1,12 @@
+server:
+  port: 8084
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin12345@cluster0.nju59.mongodb.net/transactionsDatabase?retryWrites=true&w=majority
+  application:
+    name: transactions-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8099/eureka/

@@ -1,0 +1,710 @@
+{
+	"info": {
+		"_postman_id": "1517f880-1c28-4b24-95f5-4c8e40b57e0f",
+		"name": "Project 2 - Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/client/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/client/6181c920dea9b1622714c5eb",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"client",
+								"6181c920dea9b1622714c5eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"71710440\",\r\n    \"lastName\": \"Cisneros\",\r\n    \"firstName\": \"Bautista\",\r\n    \"names\": \"Pabel\",\r\n    \"dateBirth\": \"1994-12-21\",\r\n    \"address\": \"Jr. Example 505\",\r\n    \"nationality\": \"Peruvian\",\r\n    \"clientType\": 0,\r\n    \"clientSubType\": \"-\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/client/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"06907344\",\r\n    \"lastName\": \"Crisostomo\",\r\n    \"firstName\": \"Paredes\",\r\n    \"names\": \"Eduardo Francisco\",\r\n    \"dateBirth\": \"1994-12-21\",\r\n    \"address\": \"Jr. Example 5000\",\r\n    \"nationality\": \"Chilean\",\r\n    \"clientType\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/client/61771e4a043c9542feae5b0f",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"client",
+								"61771e4a043c9542feae5b0f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/credit/6181c920dea9b1622714c5eb",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								"6181c920dea9b1622714c5eb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bank Account",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/bank-account/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/bank-account/6181caa73c2539204250d34c",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								"6181caa73c2539204250d34c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Body Ahorro)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Cuenta de Pabel - Ahorro\",\r\n    \"accountType\": \"A\",\r\n    \"limitPerMonth\": 3,\r\n    \"commission\": 0.0,\r\n    \"bankAccountNumber\": \"CAH-19290807040619\",\r\n    \"balance\": 200.00,\r\n    \"transactionDay\": null,\r\n    \"clientId\": \"6181c920dea9b1622714c5eb\",\r\n    \"signers\": null,\r\n    \"minimumAmount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/bank-account/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Body Cta. corriente)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Cuenta de Pabel - Corriente\",\r\n    \"accountType\": \"C\",\r\n    \"limitPerMonth\": 99999,\r\n    \"commission\": 5.50,\r\n    \"bankAccountNumber\": \"CC-19290807040764\",\r\n    \"balance\": 3500.00,\r\n    \"transactionDay\": null,\r\n    \"clientId\": \"6181c920dea9b1622714c5eb\",\r\n    \"signers\": null,\r\n    \"minimumAmount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/bank-account/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Body Plazo fijo)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Cuenta de Pabel - Plazo Fijo\",\r\n    \"accountType\": \"P\",\r\n    \"limitPerMonth\": 1,\r\n    \"commission\": 0.0,\r\n    \"bankAccountNumber\": \"PF-19290807040999\",\r\n    \"balance\": 2090.00,\r\n    \"transactionDay\": 25,\r\n    \"clientId\": \"6181c920dea9b1622714c5eb\",\r\n    \"signers\": null,\r\n    \"minimumAmount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/bank-account/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Cuenta de Pabel - Ahorro - Cambio\",\r\n    \"balance\": 2000.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/bank-account/6181caa73c2539204250d34c",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								"6181caa73c2539204250d34c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/bank-account/6181ccb1dd48a200cd6331b7",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								"6181ccb1dd48a200cd6331b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make Movement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8087/bank-account/6181caa73c2539204250d34c/deposit?quantity=50.00",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								"6181caa73c2539204250d34c",
+								"deposit"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "50.00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make Transaction Between Two Accounts",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/bank-account/transfer/6181caa73c2539204250d34c/6181cb7c3c2539204250d34e/deposit?quantity=25.00",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"bank-account",
+								"transfer",
+								"6181caa73c2539204250d34c",
+								"6181cb7c3c2539204250d34e",
+								"deposit"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "25.00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credit",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/credit/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/credit/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Body Personal)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creditType\": \"P\",\r\n    \"status\": \"ACTIVE\",\r\n    \"initialAmount\": 2000.0,\r\n    \"currentAmount\": 2000.0,\r\n    \"interest\": 0.0,\r\n    \"paymentDay\": \"5\",\r\n    \"creditAccountNumber\": \"P-84823901263\",\r\n    \"clientId\": \"6181c920dea9b1622714c5eb\",\r\n    \"cardNumber\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/credit/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Body Empresarial)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creditType\": \"E\",\r\n    \"status\": \"ACTIVE\",\r\n    \"initialAmount\": 2500.0,\r\n    \"currentAmount\": 2500.0,\r\n    \"interest\": 0.0,\r\n    \"paymentDay\": \"10\",\r\n    \"creditAccountNumber\": \"P-7639573999\",\r\n    \"clientId\": \"6181c8e9dea9b1622714c5ea\",\r\n    \"cardNumber\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/credit/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Tarjeta de crédito)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creditType\": \"T\",\r\n    \"status\": \"ACTIVE\",\r\n    \"initialAmount\": 4500.0,\r\n    \"currentAmount\": 4500.0,\r\n    \"interest\": 0.0,\r\n    \"paymentDay\": \"5\",\r\n    \"creditAccountNumber\": null,\r\n    \"clientId\": \"6181c8e9dea9b1622714c5ea\",\r\n    \"cardNumber\": \"4557-7839-1293-8651\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/credit/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creditType\": \"T\",\r\n    \"status\": \"ACTIVE\",\r\n    \"initialAmount\": 4500.0,\r\n    \"currentAmount\": 4500.0,\r\n    \"interest\": 0.0,\r\n    \"paymentDay\": \"5\",\r\n    \"cardNumber\": \"4557-7839-1293-7777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/credit/6177268a99141271eef1f392",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								"6177268a99141271eef1f392"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/credit/6181d217d07c016e71ef6f4d",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								"6181d217d07c016e71ef6f4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make Movement Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8087/credit/6181dfce03bf125464e37415/deposit?quantity=200.0",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"credit",
+								"6181dfce03bf125464e37415",
+								"deposit"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "200.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Get All - Gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/transaction/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"transaction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Account Id - Gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/transaction/account/6181cb7c3c2539204250d34e",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"transaction",
+								"account",
+								"6181cb7c3c2539204250d34e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction (Bank Account - Ahorro)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"NIUBIZ 126 - Pago de Internet \",\r\n    \"date\": \"2021-10-25\",\r\n    \"amount\": -100.00,\r\n    \"transactionType\": \"B\",\r\n    \"accountId\": \"6181caa73c2539204250d34c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/transaction/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"transaction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction (Credit)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"NIUBIZ 301 - Pago a crédito\",\r\n    \"date\": \"2021-10-26\",\r\n    \"amount\": 200.00,\r\n    \"transactionType\": \"C\",\r\n    \"accountId\": \"6181dfce03bf125464e37415\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/transaction/",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"transaction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"NIUBIZ 201 - Retiro de cuenta corriente desconocido\",\r\n    \"date\": \"2021-10-25\",\r\n    \"amount\": -84.5,\r\n    \"accountId\": \"6177214cebf579276b366a34\",\r\n    \"transactionType\": \"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/transaction/61772a82104e4328576b0d5c",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"transaction",
+								"61772a82104e4328576b0d5c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/transaction/6177296d104e4328576b0d5b",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"transaction",
+								"6177296d104e4328576b0d5b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

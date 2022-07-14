@@ -1,0 +1,12 @@
+server:
+  port: 8082
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin12345@cluster0.nju59.mongodb.net/creditDatabase?retryWrites=true&w=majority
+  application:
+    name: credit-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8099/eureka/
